@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  MyPlaces
-//
-//  Created by Artem Morozov on 25.04.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
