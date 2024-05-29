@@ -1,10 +1,3 @@
-//
-//  CustomTableViewCell.swift
-//  MyPlaces
-//
-//  Created by Artem Morozov on 28.05.2024.
-//
-
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
@@ -13,6 +6,4 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     
-    
-
 }

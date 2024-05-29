@@ -99,7 +99,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Hello" id="4pR-4H-Ggk">
+                            <tableViewSection id="4pR-4H-Ggk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="FYE-hT-NRB">
                                         <rect key="frame" x="0.0" y="50" width="393" height="250"/>
@@ -246,11 +246,22 @@
                     <navigationItem key="navigationItem" title="New Place" id="nah-7L-4dh">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fsy-nz-kuh">
                             <connections>
-                                <segue destination="ujZ-yB-Uwj" kind="unwind" unwindAction="canselAction:" id="d5G-fN-dhR"/>
+                                <action selector="cancelAction:" destination="8ev-CT-DIJ" id="iqi-V4-J78"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zSs-61-5Ie"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="zSs-61-5Ie">
+                            <connections>
+                                <segue destination="ujZ-yB-Uwj" kind="unwind" unwindAction="unwindSegue:" id="SF7-Zl-5si"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="placeImage" destination="Xkf-BP-fEt" id="lv1-P8-Z9j"/>
+                        <outlet property="placeLocationField" destination="NPz-sw-Z96" id="3wq-0o-AqD"/>
+                        <outlet property="placeNameField" destination="GDH-xE-bUO" id="6Cf-Ka-XZV"/>
+                        <outlet property="placeTypeField" destination="bpq-xI-2Tn" id="LIX-ow-ole"/>
+                        <outlet property="saveButton" destination="zSs-61-5Ie" id="IAZ-Xj-WAb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nh-YE-V3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ujZ-yB-Uwj" userLabel="Exit" sceneMemberID="exit"/>
