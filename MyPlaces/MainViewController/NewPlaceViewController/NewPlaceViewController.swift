@@ -2,7 +2,6 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController, UINavigationControllerDelegate {
     
-    var newPlace: Place?
     var imageIsChanged = false
     
     @IBOutlet weak var placeImage: UIImageView!
@@ -13,6 +12,7 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.tableFooterView = UIView()
         saveButton.isEnabled = false
         
@@ -20,6 +20,8 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
     }
     
     func saveNewPlace() {
+        
+       
         var image: UIImage?
         
         if imageIsChanged {
@@ -27,8 +29,12 @@ class NewPlaceViewController: UITableViewController, UINavigationControllerDeleg
         }else {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
+        let imageData = image?.pngData()
         
-        newPlace = Place(name: placeNameField.text!, location: placeLocationField.text, type: placeTypeField.text, image: image, restarauntImage: nil)
+        let newPlace = Place(name: placeNameField.text!, location: placeLocationField.text, type: placeTypeField.text, imageData: imageData)
+        
+        
+        StorageManager.saveObject(newPlace)
     }
     
     
