@@ -69,6 +69,7 @@
                                     <outlet property="locationLabel" destination="Obs-if-yQQ" id="gep-DY-bh9"/>
                                     <outlet property="nameLabel" destination="eJc-gc-wL7" id="Kwu-1h-HSW"/>
                                     <outlet property="typeLabel" destination="qsY-tx-Op8" id="ZWG-Oa-PdH"/>
+                                    <segue destination="8ev-CT-DIJ" kind="show" identifier="showDetail" id="ZJQ-1i-PMZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,7 +78,7 @@
                             <outlet property="delegate" destination="6Wa-jz-c2D" id="Q24-wO-CIH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="R4O-Xg-F6B">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="R4O-Xg-F6B">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cdv-Iq-bjZ">
                             <connections>
                                 <segue destination="HdZ-zu-Xai" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="s07-o9-cQy"/>
@@ -243,7 +244,7 @@
                             <outlet property="delegate" destination="8ev-CT-DIJ" id="HZw-Im-LE0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="nah-7L-4dh">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="nah-7L-4dh">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fsy-nz-kuh">
                             <connections>
                                 <action selector="cancelAction:" destination="8ev-CT-DIJ" id="iqi-V4-J78"/>
@@ -272,8 +273,8 @@
         <scene sceneID="XKh-HD-IXP">
             <objects>
                 <navigationController storyboardIdentifier="MainViewController" id="Dnb-FX-HkY" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xWH-Ke-a33">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xWH-Ke-a33">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
@@ -309,9 +310,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5e1-h8-qdx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.56488549618314" y="-79.577464788732399"/>
+            <point key="canvasLocation" x="760" y="-481"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZJQ-1i-PMZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <systemColor name="systemBackgroundColor">
